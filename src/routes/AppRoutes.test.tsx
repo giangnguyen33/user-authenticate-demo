@@ -3,7 +3,7 @@ import { MemoryRouter } from "react-router";
 import AppRoutes from "./AppRoutes";
 import AuthProvider, { AuthContext } from "../hooks/AuthProvider";
 
-describe.only("AppRoutes", () => {
+describe("AppRoutes", () => {
   it("should link to Login page when path /", () => {
     render(<AppRoutes />, { wrapper: MemoryRouter });
 
