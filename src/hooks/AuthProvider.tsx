@@ -12,7 +12,7 @@ interface AuthProviderProps {
   logout(): void;
 }
 
-const AuthContext = createContext<AuthProviderProps>({
+export const AuthContext = createContext<AuthProviderProps>({
   user: "",
   token: "",
   login: () => {},

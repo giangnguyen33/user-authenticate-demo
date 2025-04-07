@@ -1,6 +1,7 @@
 import { DarkThemeToggle } from "flowbite-react";
 import AppRoutes from "./routes/AppRoutes";
 import { BrowserRouter } from "react-router";
+import AuthProvider from "./hooks/AuthProvider";
 
 export default function App() {
   return (
@@ -33,7 +34,9 @@ export default function App() {
         <div className="relative flex w-full flex-col items-start gap-6 self-stretch">
           <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2"></div>
           <BrowserRouter>
-            <AppRoutes />
+            <AuthProvider>
+              <AppRoutes />
+            </AuthProvider>
           </BrowserRouter>
         </div>
       </div>
