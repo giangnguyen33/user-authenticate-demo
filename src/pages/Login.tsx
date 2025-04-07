@@ -1,9 +1,11 @@
 import { Button, Label, TextInput } from "flowbite-react";
 import { useAuth } from "../hooks/AuthProvider";
 import { useState, type ChangeEvent, type SyntheticEvent } from "react";
+import { useNavigate } from "react-router";
 
 const Login = () => {
   const auth = useAuth();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,11 +20,11 @@ const Login = () => {
     e.preventDefault();
     if (email === "" || password === "") {
       // TODO show validation messages
-      alert("Email and password is required");
       return;
     }
 
     auth.login({ email, password });
+    navigate("/welcome");
   };
 
   return (
@@ -30,6 +32,7 @@ const Login = () => {
       <div>
         <Label id="email">Email:</Label>
         <TextInput
+          value={email}
           aria-labelledby="email"
           name="email"
           type="email"
@@ -41,6 +44,7 @@ const Login = () => {
         <Label id="password">Password:</Label>
         <TextInput
           aria-labelledby="password"
+          value={password}
           name="password"
           type="password"
           placeholder="Please enter your password"
@@ -48,7 +52,9 @@ const Login = () => {
         ></TextInput>
       </div>
       <div>
-        <Button type="submit"> Login</Button>
+        <Button type="submit" name="Submit">
+          Login
+        </Button>
       </div>
     </form>
   );
