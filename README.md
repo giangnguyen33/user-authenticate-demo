@@ -6,6 +6,7 @@ User enter email and password. If valid email and password, api returns token, t
 - React Router
 - Flowbite components
 - Unit test with Jest and react testing library
+- E2E test with Playwright
 
 User
 
@@ -21,6 +22,11 @@ User
 
 - `bash npm run dev `
 
-# How to run test
+# How to run unit test
 
 - `bash npm run dev `
+
+# How to run e2e test
+
+- Install playwright
+- `npx playwright test` or ` npx playwright test --project=chromium` if you want to see screen on browser
