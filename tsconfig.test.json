@@ -13,7 +13,7 @@
     "**/*.test.tsx",
     "**/*.test.ts",
     "./jest.config.ts",
-    "tests",
+    "e2e-tests",
     "src"
   ]
 }

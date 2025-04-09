@@ -2,12 +2,9 @@ import type { Config } from 'jest';
 
 const config: Config = {
   preset: 'ts-jest',
-  // moduleNameMapper: {
-  //   '\\.(css|scss)$': 'identity-obj-proxy',
-  //   "^.+\\.svg": "<rootDir>/tests/mocks/svgMock.tsx"
-  // },
   // to obtain access to the matchers.
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  modulePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/e2e-tests/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   modulePaths: ['<rootDir>'],
   testEnvironment: 'jsdom',

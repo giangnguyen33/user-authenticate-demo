@@ -24,9 +24,10 @@ User
 
 # How to run unit test
 
-- `bash npm run dev `
+- `bash npm run test:unit `
 
 # How to run e2e test
 
 - Install playwright
-- `npx playwright test` or ` npx playwright test --project=chromium` if you want to see screen on browser
+- `npm run test:e2e`
+- ` npx playwright test --project=chromium` if you want to see screen on browser
