@@ -27,5 +27,5 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build --if-present
-      - name: Run the tests and generate coverage report
-        run: npm test -- --coverage
+      - name: Run unit tests and generate coverage report
+        run: npm run test:unit -- --coverage

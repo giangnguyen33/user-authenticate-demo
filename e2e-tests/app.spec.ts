@@ -32,5 +32,3 @@ test('should allow user logout', async ({ page }) => {
 
     await expect(page).toHaveURL('/login');
 })
-
-
