@@ -7,6 +7,7 @@ User enter email and password. If valid email and password, api returns token, t
 - Flowbite components
 - Unit test with Jest and react testing library
 - E2E test with Playwright
+- Config CI/CD with Github Actions
 
 User
 
