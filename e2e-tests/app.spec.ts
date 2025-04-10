@@ -17,7 +17,7 @@ test('should allow user login and see welcome page', async ({ page }) => {
 
     await loginWithUsernameAndPassword(page)
 
-    await expect(page).toHaveURL('/welcome');
+    await expect(page).toHaveURL('user-authenticate-demo/welcome');
     await expect(page.getByText('Welcome user@test.com')).toBeVisible()
     await expect(page.getByRole('button', { name: 'Logout' })).toBeVisible()
 
@@ -30,5 +30,5 @@ test('should allow user logout', async ({ page }) => {
 
     await page.getByRole('button', { name: 'Logout' }).click();
 
-    await expect(page).toHaveURL('/login');
+    await expect(page).toHaveURL('user-authenticate-demo/login');
 })

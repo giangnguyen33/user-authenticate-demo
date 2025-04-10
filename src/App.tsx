@@ -33,7 +33,7 @@ export default function App() {
 
         <div className="relative flex w-full flex-col items-start gap-6 self-stretch">
           <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2"></div>
-          <BrowserRouter>
+          <BrowserRouter basename={"/user-authenticate-demo"}>
             <AuthProvider>
               <AppRoutes />
             </AuthProvider>
