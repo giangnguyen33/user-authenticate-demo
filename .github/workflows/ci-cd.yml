@@ -31,13 +31,10 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run e2e tests with playwright
         run: npm run test:e2e
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v4
       - name: Build
         run: npm run build --if-present
       - name: Upload production-ready build files
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: ./dist
@@ -50,7 +47,9 @@ jobs:
 
     permissions:
       pages: write
+      contents: write
       id-token: write
+      actions: read
 
     environment:
       # environment created automatically by GitHub
