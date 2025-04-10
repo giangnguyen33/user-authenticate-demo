@@ -9,8 +9,6 @@ User enter email and password. If valid email and password, api returns token, t
 - E2E test with Playwright
 - Config CI/CD with Github Actions
 
-User
-
 # Limitation
 
 - This is demo, not call real api to get token
